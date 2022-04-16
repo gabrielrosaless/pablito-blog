@@ -173,3 +173,39 @@ export const getComments = async (slug) => {
     const result = await request(graphqlAPI, query, {slug});
     return result.comments;
 }
+
+
+export const getCategoryDetails = async (slug) => {
+    const query = gql`
+        query GetCategoryDetails($slug: String!) {
+            category(where: {slug: $slug}) {
+                name
+                slug
+                post {
+                    content {
+                        raw
+                    }
+                    slug
+                    id
+                    excerpt
+                    author {
+                        bio
+                        name
+                        id
+                        photo {
+                        url
+                        }
+                    }
+                    title
+                    featuredImage {
+                        url
+                    }
+                    
+                }
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query, {slug});
+    return result.category;
+}
