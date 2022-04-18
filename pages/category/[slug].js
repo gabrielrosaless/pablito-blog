@@ -5,13 +5,12 @@ import {PostCard} from '../../component';
 
 const CategoryDetails = ({ category }) => {
 
-
   return (
     <>
       <div className='container mx-auto px-10 mb-8 '>
         <div className=''>
           <h2 className='text-xl font-semibold text-white'>
-            ! Aquí estan mis mis {category.name.toLowerCase()} !
+            ! Aquí estan mis {category.name.toLowerCase()} !
           </h2>
 
         </div>
@@ -24,7 +23,7 @@ const CategoryDetails = ({ category }) => {
               <PostCard post={item} key={item.title} />
             ))
           }
-          {(category.post.lenght == 0) && <p className='text-xl text-red-600'>Aún no cargue mis {category.name.toLowerCase()}.</p>}
+          {(category.post.length == 0) && <p className='text-xl text-red-600'>Aún no cargue mis {category.name.toLowerCase()}.</p>}
         </div>
       </div>
     </>
