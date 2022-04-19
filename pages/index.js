@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { PostCard, Categories, PostWidget } from '../component';
-import { getPosts } from '../services';
+import { getLastPost } from '../services';
 
 // const posts = [
 //   {title:'React testing', excerpt: 'Learn react testing'},
@@ -17,7 +17,7 @@ export default function Home({ posts }) {
       </Head>
 
       <div className="container mx-auto pb-6 whitespace-nowrap overflow-hidden overflow-ellipsis">
-        <span className="font-bold text-xl text-white">↓ Esta es mi ultima publicación ↓ </span>
+        <span className="font-bold text-2xl text-white p-4"> Mi última publicación </span>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
         <div className='lg:col-span-8 col-span-1'>
@@ -36,7 +36,7 @@ export default function Home({ posts }) {
 
 
 export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
+  const posts = (await getLastPost()) || [];
 
   return {
     props: { posts }

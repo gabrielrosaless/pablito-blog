@@ -25,7 +25,7 @@ const Header = () => {
                 <div className="hidden md:float-left md:contents">
                     <span className="md:float-right mt-2 align-middle ml-4  cursor-pointer">
                     <a href='https://cafecito.app/pablonrosales' rel='noopener' target='_blank'>
-                        <img srcset='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_3.png' alt='Invitame un café en cafecito.app' />
+                        <img srcSet='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_3.png' alt='Invitame un café en cafecito.app' />
                     </a>
                     </span>
                     
