@@ -27,6 +27,7 @@ function PostWidget({ categories, slug }) {
       {relatedPosts.map((post) => (
         <div key={post.title} className='flex items-center w-full mb-4' >
           <div className='w-16 flex-none'>
+          <Link href={`/post/${post.slug}`} key={post.title} className='text-md'>
             <img
               alt={post.title}
               height='60px'
@@ -34,6 +35,7 @@ function PostWidget({ categories, slug }) {
               className='align-middle rounded-full'
               src={post.featuredImage.url}
             />
+            </Link>
           </div>
           <div className='flex-grow ml-4'>
             <p className='text-gray-500 font-xs'>
