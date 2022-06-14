@@ -1,10 +1,16 @@
 import React from 'react'
 import { getCategories, getCategoryDetails } from '../../services';
-
-import {PostCard} from '../../component';
+import {useRouter} from 'next/router';
+import {PostCard,Loader} from '../../component';
 
 const CategoryDetails = ({ category }) => {
 
+  const router = useRouter();
+
+    if (router.isFallback) {
+        return <Loader />
+    }
+  
   return (
     <>
       <div className='container mx-auto px-10 mb-8 '>
@@ -49,6 +55,6 @@ export async function getStaticPaths({ params }) {
   console.log('categoreis:', categories)
   return {
     paths: categories.map(({ slug }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: true,
   }
 }
