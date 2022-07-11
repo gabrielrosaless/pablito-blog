@@ -103,14 +103,14 @@ const PostDetail = ({ post }) => {
           <h1 className='text-3xl font-semibold col-span-2'>{post.title}</h1>
           
           {/* Toggle button modo oscuro*/}
-          <div className="flex items-center justify-center w-full mb-8">
+          <div className="flex justify-center w-full mb-8 col-span-1">
             <label htmlFor="toogleA" className="flex items-center cursor-pointer">
               <div className="relative">
                 <input id="toogleA" type="checkbox" className="sr-only" onClick={onClickToggleDark} />
                 <div className="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
                 <div className="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
               </div>
-              <div className="ml-3 text-gray-700 text-xl font-semibold">
+              <div className="ml-3 text-gray-700 font-semibold">
                 Modo oscuro
               </div>
             </label>
