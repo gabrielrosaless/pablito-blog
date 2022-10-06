@@ -16,13 +16,13 @@ const CategoryDetails = ({ category }) => {
       <div className='container mx-auto px-10 mb-8 '>
         <div className=''>
           <h2 className='text-xl font-semibold text-white'>
-            ! Aquí estan mis {category.name.toLowerCase()} !
+            ! Aquí están mis {category.name.toLowerCase()} !
           </h2>
 
         </div>
       </div>
       <div className="container mx-auto px-10 mb-8">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4">
           
           { 
             category.post.map((item) => (
